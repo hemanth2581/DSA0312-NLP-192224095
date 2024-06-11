@@ -1,0 +1,20 @@
+import re
+
+def main():
+    # Sample text
+    text = "Hello, my email is pandurisaikiran@gmail.com and my phone number is 6305682973."
+
+    # Define regular expressions
+    email_pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+    phone_pattern = r'\b\d{3}[-.]?\d{3}[-.]?\d{4}\b'
+
+    # Find email addresses
+    emails = re.findall(email_pattern, text)
+    print("Email addresses found:", emails)
+
+    # Find phone numbers
+    phones = re.findall(phone_pattern, text)
+    print("Phone numbers found:", phones)
+
+if __name__ == "__main__":
+    main()
